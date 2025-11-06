@@ -75,6 +75,9 @@ cd ../
 west update
 pip install -r zephyr/scripts/requirements.txt
 
+### Initialize Submodules
+git submodule update --init --recursive
+
 cd examples/device/cdc_msc_zephyr/
 west build -b alif_e7_dk/ae722f80f55d5xx/rtss_hp
 ```
