@@ -9,7 +9,7 @@ manifest:
   
   projects:
     - name: zephyr
-      repo-path: zephyr_alif
+      repo-path: zephyr_alif.git
       revision: main
       import: true
   self:
