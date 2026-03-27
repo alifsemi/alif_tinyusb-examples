@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/tools/projmgr/2.6.0/tools/projmgr/schemas/clayer.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/tools/projmgr/2.12.0/tools/projmgr/schemas/clayer.schema.json
 layer:
   description: Alif Ensemble components layer
 
@@ -14,6 +14,14 @@ layer:
     - component: AlifSemiconductor::BSP:Board Config
     - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e7
       for-context:
-        - +E7-HE
-        - +E7-HP
+        - +DevKit-E7-HE
+        - +DevKit-E7-HP
+    - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e8
+      for-context:
+        - +DevKit-E8-HE
+        - +DevKit-E8-HP
+    - component: AlifSemiconductor::BSP:AppKit Config&AppKit-E8-AIML
+      for-context:
+        - +AppKit-E8-HE
+        - +AppKit-E8-HP
 
