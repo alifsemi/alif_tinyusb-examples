@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/tools/projmgr/2.6.0/tools/projmgr/schemas/clayer.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Open-CMSIS-Pack/devtools/tools/projmgr/2.12.0/tools/projmgr/schemas/clayer.schema.json
 layer:
   description: Alif Ensemble components layer
 
@@ -14,6 +14,21 @@ layer:
     - component: AlifSemiconductor::BSP:Board Config
     - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e7
       for-context:
-        - +E7-HE
-        - +E7-HP
+        - +DevKit-E7-HE
+        - +DevKit-E7-HP
+        # E3 (AE302F80F55D5LE) has no native SOC condition in the DFP — using DevKit-e7 board config as workaround
+        - +DevKit-E7-E3-HE
+        - +DevKit-E7-E3-HP
+    - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e8
+      for-context:
+        - +DevKit-E8-HE
+        - +DevKit-E8-HP
+    - component: AlifSemiconductor::BSP:DevKit Config&DevKit-e1c
+      for-context:
+        - +DevKit-E1C-HE
+
+    - component: AlifSemiconductor::BSP:AppKit Config&AppKit-E8-AIML
+      for-context:
+        - +AppKit-E8-HE
+        - +AppKit-E8-HP
 
